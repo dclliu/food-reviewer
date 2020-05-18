@@ -2,6 +2,9 @@ import React from 'react';
 import './App.css';
 import Restaurant from '../Restaurant/Restaurant';
 import RestaurantList from '../RestaurantList/RestaurantList';
+import SearchBar from '../SearchBar/SearchBar';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const restaurantPlaceholder = {
   imageSrc: 'https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg',
@@ -29,6 +32,7 @@ class App extends React.Component {
 	return (
 		<div className="App">
 		<h1> food-reviewer </h1>
+		<SearchBar />
 		<RestaurantList restaurants = {restaurantArray} />
 		</div>
 	);
