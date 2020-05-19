@@ -10,16 +10,18 @@ class SearchBar extends React.Component {
 	};
 	this.handleTermChange = this.handleTermChange.bind(this);
 	this.handleLocationChange = this.handleLocationChange.bind(this);
+	this.handleSearch = this.handleSearch.bind(this);
     }
     handleTermChange(e) {
 	this.setState({term: e.target.value});
     }
     handleLocationChange(e) {
 	this.setState({location: e.target.value});
-    }
-    handleSearch(e) {
-	console.log("search function in progress");
-    }
+	}
+	handleSearch(e) {
+		this.props.handleSearch(this.state.term, this.state.location);
+		e.preventDefault();
+	}
     render() {
 	return (
 		<div className = "SearchBar" className = "container">
