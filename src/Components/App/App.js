@@ -4,18 +4,18 @@ import Restaurant from '../Restaurant/Restaurant';
 import RestaurantList from '../RestaurantList/RestaurantList';
 import SearchBar from '../SearchBar/SearchBar';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 
 const restaurantPlaceholder = {
-  imageSrc: 'https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg',
-  name: 'Restaurant Name',
-  address: 'Restaurant St Address',
-  city: 'Restaurant City',
-  state: 'Restaurant State',
-  zipCode: 'Restaurant Zip Code',
-  category: 'Restaurant Category',
-  rating: 5.0,
-  reviewCount: 100
+    imageSrc: 'https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg',
+    name: 'Restaurant Name',
+    address: 'Restaurant St Address',
+    city: 'Restaurant City',
+    state: 'Restaurant State',
+    zipCode: 'Restaurant Zip Code',
+    category: 'Restaurant Category',
+    rating: 5.0,
+    reviewCount: 100
 };
 
 const restaurantArray = [
@@ -29,13 +29,13 @@ const restaurantArray = [
 
 class App extends React.Component {
     render() {
-	return (
-		<div className="App">
-		<h1> food-reviewer </h1>
-		<SearchBar />
-		<RestaurantList restaurants = {restaurantArray} />
-		</div>
-	);
+        return (
+            <div className="App">
+                <h1> food-reviewer </h1>
+                <SearchBar />
+                <RestaurantList restaurants={restaurantArray} />
+            </div>
+        );
     }
 }
 
