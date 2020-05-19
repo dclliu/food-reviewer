@@ -16,7 +16,6 @@ class Restaurant extends React.Component {
 					<div className="Restaurant-info" className="col-sm-3">
 						<h3> {this.props.restaurant.address}</h3>
 						<h3> {this.props.restaurant.city}, {this.props.restaurant.state}, {this.props.restaurant.zipCode}</h3>
-
 					</div>
 					<div className="Review-info" className="col-sm-3">
 						<h3> Average rating: {this.props.restaurant.rating}/5 </h3>
