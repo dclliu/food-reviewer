@@ -46,8 +46,6 @@ class SearchResults extends React.Component {
         return (
             <div className = "Search-results">
                 <h1> search results page !</h1>
-                <h4> search term is {term} </h4>
-                <h4> search location is {location} </h4>
                 <SearchBar handleSearch = {this.searchYelp} />
                 <RestaurantList restaurants = {this.state.restaurants}/>
             </div>

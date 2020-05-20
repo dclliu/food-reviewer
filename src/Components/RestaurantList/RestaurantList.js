@@ -6,7 +6,7 @@ class RestaurantList extends React.Component {
     render() {
 	return (
 		<div>
-	    	{this.props.restaurants.map(restaurant => {
+	    	{this.props.restaurants.slice(0,1).map(restaurant => {
 			return <Restaurant restaurant = {restaurant} key = {restaurant.id}/>;
 	    	})}
 		</div>
