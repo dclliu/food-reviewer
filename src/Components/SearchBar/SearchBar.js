@@ -1,12 +1,13 @@
 import React from 'react';
 import './SearchBar.css';
+import {Redirect} from 'react-router-dom';
 
 class SearchBar extends React.Component {
     constructor(props) {
 	super(props);
 	this.state = {
 	    term: '',
-	    location: '' 
+		location: ''
 	};
 	this.handleTermChange = this.handleTermChange.bind(this);
 	this.handleLocationChange = this.handleLocationChange.bind(this);
@@ -20,24 +21,17 @@ class SearchBar extends React.Component {
 	}
 	handleSearch(e) {
 		this.props.handleSearch(this.state.term, this.state.location);
+		
 		e.preventDefault();
 	}
     render() {
 	return (
 		<div className = "SearchBar" className = "container">
-		<div className = "Search-fields" className = "row justify-content-center">
-		<div>
-		<input placeholder = "Search by business" onChange = {this.handleTermChange}/>
-		</div>
-		<div>
-		<input placeholder = "Search by location" onChange = {this.handleLocationChange}/>
-		</div>
-		</div>
-		<div className = "row justify-content-center" >
-		<button type="button" className = "btn btn-primary" onClick = {this.handleSearch}>
-		Search
-		</button>
-		</div>
+			<form onSubmit = {this.handleSearch}>
+				<input placeholder = "Search by business" onChange = {this.handleTermChange}/>
+				<input placeholder = "Search by location" onChange = {this.handleLocationChange}/>
+				<input type = 'submit' value = 'Search'/>
+			</form>
 	    </div>
 	);
     }
