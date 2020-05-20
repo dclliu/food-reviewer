@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-const apiKey = 'l_V052s4yME-K4R0NxkXG70ZUaeDFjqpDj5FMFNv2mfhIfxytoTgTPobcN5bdijqpSwPd3CeG124Bp7_hBLaMJEF1GocsRAjaXfe50yMGjqQBMfxW-HV8PCJcezCXnYx'; //enter your own yelp api key
+const apiKey = ''; //enter your own yelp api key
 
 
 const Yelp = {

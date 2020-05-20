@@ -1,6 +1,7 @@
 import React from 'react';
 import './SearchBar.css';
 import {Redirect} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 class SearchBar extends React.Component {
     constructor(props) {
@@ -21,8 +22,8 @@ class SearchBar extends React.Component {
 	}
 	handleSearch(e) {
 		this.props.handleSearch(this.state.term, this.state.location);
-		
 		e.preventDefault();
+		this.props.history.push(`/search?term=${this.state.term}&location=${this.state.location}`); //redirect url
 	}
     render() {
 	return (
@@ -38,4 +39,4 @@ class SearchBar extends React.Component {
 }
 
 
-export default SearchBar;
+export default withRouter(SearchBar);

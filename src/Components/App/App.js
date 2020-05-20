@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Main from '../Main/Main';
+import SearchResults from '../SearchResults/SearchResults';
 import {
     BrowserRouter as Router,
     Switch,
@@ -24,6 +25,7 @@ class App extends React.Component {
                 <Switch>
                     <Route path = '/about'><About/></Route>
                     <Route path = '/contact'><Contact/></Route>
+                    <Route path = '/search'><SearchResults /></Route>
                     <Route path = ''> 
                         <div className = 'App'>
                             <Main/> 
