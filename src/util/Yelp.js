@@ -4,7 +4,7 @@ function handleErrors(response) {
     if (!response.ok) {
         throw Error(response.statusText);
     }
-    return response;
+    return response.json();
 }
 
 const Yelp = {
@@ -31,10 +31,8 @@ const Yelp = {
                         rating: business.rating,
                         reviewCount: business.review_count
                     }));
-                    
                 } else {
-                    console.log('unsuccessful');
-                //ReactDOM.render(<h1> empty </h1>,document.getElementById('app'));
+                console.log(jsonResponse);
                 return [];
             }
         }).catch(error => {
