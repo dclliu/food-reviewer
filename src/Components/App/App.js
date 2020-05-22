@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Main from '../Main/Main';
 import SearchResults from '../SearchResults/SearchResults';
+import ReviewPage from '../ReviewPage/ReviewPage';
 import {
     BrowserRouter as Router,
     Switch,
@@ -26,11 +27,8 @@ class App extends React.Component {
                     <Route path = '/about'><About/></Route>
                     <Route path = '/contact'><Contact/></Route>
                     <Route path = '/search'><SearchResults /></Route>
-                    <Route path = ''> 
-                        <div className = 'App'>
-                            <Main/> 
-                        </div>
-                    </Route>
+                    <Route path = '/restaurant'><ReviewPage /></Route>
+                    <Route path = ''> <Main/> </Route>
                     
                 </Switch>
             </Router>

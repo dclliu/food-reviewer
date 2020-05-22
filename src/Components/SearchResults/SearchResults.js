@@ -24,8 +24,13 @@ class SearchResults extends React.Component {
 
     constructor(props) {
         super(props);
+        let queryString = window.location.search;
+        let urlParams = new URLSearchParams(queryString);
+        let term = urlParams.get('term');
+        let location = urlParams.get('location');
         this.state = {
-            restaurants: []
+            restaurants: this.searchYelp(term, location)
+
         };
         this.searchYelp = this.searchYelp.bind(this);
     }
@@ -34,20 +39,16 @@ class SearchResults extends React.Component {
         Yelp.search(term, location).then(restaurants => {
             this.setState({restaurants: restaurants});
         });
-        
-       //this.setState({restaurants: [temporaryRestaurant]});
     }
     render() {
-        let queryString = window.location.search;
-        let urlParams = new URLSearchParams(queryString);
-        let term = urlParams.get('term');
-        let location = urlParams.get('location');
-        this.searchYelp(term,location);
         return (
             <div className = "Search-results">
                 <h1> search results page !</h1>
                 <SearchBar handleSearch = {this.searchYelp} />
+                {this.state.restaurants ? 
                 <RestaurantList restaurants = {this.state.restaurants}/>
+                : <h1> loading </h1>
+            }
             </div>
         );
     }

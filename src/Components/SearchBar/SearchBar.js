@@ -27,7 +27,7 @@ class SearchBar extends React.Component {
 	}
     render() {
 	return (
-		<div className = "SearchBar" className = "container">
+		<div >
 			<form onSubmit = {this.handleSearch}>
 				<input placeholder = "Search by business" onChange = {this.handleTermChange}/>
 				<input placeholder = "Search by location" onChange = {this.handleLocationChange}/>
