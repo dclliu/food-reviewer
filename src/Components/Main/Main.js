@@ -1,7 +1,6 @@
 import React from 'react';
 import './Main.css';
-import SearchBar from '../SearchBar/SearchBar';
-import Yelp from '../../util/Yelp';
+import BigSearchBar from '../BigSearchBar/BigSearchBar';
 
 class Main extends React.Component {
 
@@ -10,7 +9,7 @@ class Main extends React.Component {
             <div className="Main">
                 <h1> food-reviewer </h1>
                 <h1> main page </h1>
-                <SearchBar handleSearch = {() => {}}/>
+                <BigSearchBar handleSearch = {() => {}}/>
             </div>
         );
     }

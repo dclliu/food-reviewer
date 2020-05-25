@@ -1,0 +1,15 @@
+.Main {
+    display: block;
+    background-image: url('./dish3.jpg');
+    background-color: grey;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+}
+
+.Main h1 {
+    text-align: center;
+    font-size: 4rem;
+}
+

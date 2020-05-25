@@ -1,6 +1,5 @@
 import React from 'react';
 import './Restaurant.css';
-import {Link} from 'react-router';
 
 class Restaurant extends React.Component {
 	constructor(props) {

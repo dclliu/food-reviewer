@@ -1,4 +1,4 @@
-const apiKey = ''; //enter your own yelp api key
+const apiKey = 'iQ8pmLEK2Wg8SRHRxvyuCf64FT9gNDJgVZruzws5XGLHpNl3X3reTymr9964LJQR1MqsX8JY0katxpNhDi2gJsPRtq7WEoJvYg2VFd-yYd7jsHFg2XuUAW-PnZrFXnYx'; //enter your own yelp api key
 
 function handleErrors(response) {
     if (!response.ok) {
@@ -15,7 +15,6 @@ const Yelp = {
         .then(handleErrors)
         .then(jsonResponse => {
             if(jsonResponse.businesses) {
-                console.log('yelp search successful');
                 return jsonResponse.businesses.map(business => (
                     {id: business.id,
                         phone: business.phone,
@@ -32,7 +31,6 @@ const Yelp = {
                         reviewCount: business.review_count
                     }));
                 } else {
-                console.log(jsonResponse);
                 return [];
             }
         }).catch(error => {

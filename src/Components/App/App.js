@@ -16,6 +16,15 @@ class App extends React.Component {
         return (
             
             <Router>
+                
+                <Switch>
+                    <Route path = '/about'><About/></Route>
+                    <Route path = '/contact'><Contact/></Route>
+                    <Route path = '/search'><SearchResults /></Route>
+                    <Route path = '/restaurant'><ReviewPage /></Route>
+                    <Route exact path = '/'> <Main/> </Route>
+                    
+                </Switch>
                 <div className = "header">
                     <ul>
                         <li><Link to = '/'>Home</Link></li>
@@ -23,14 +32,6 @@ class App extends React.Component {
                         <li><Link to = 'contact'>Contact</Link></li>
                     </ul>
                 </div>
-                <Switch>
-                    <Route path = '/about'><About/></Route>
-                    <Route path = '/contact'><Contact/></Route>
-                    <Route path = '/search'><SearchResults /></Route>
-                    <Route path = '/restaurant'><ReviewPage /></Route>
-                    <Route path = ''> <Main/> </Route>
-                    
-                </Switch>
             </Router>
         );
     }

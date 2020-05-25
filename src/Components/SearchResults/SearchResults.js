@@ -3,7 +3,7 @@ import './SearchResults.css';
 import Main from '../Main/Main';
 import RestaurantList from '../RestaurantList/RestaurantList';
 import Yelp from '../../util/Yelp';
-import SearchBar from '../SearchBar/SearchBar';
+import SmallSearchBar from '../SmallSearchBar/SmallSearchBar';
 
 const temporaryRestaurant = 
     {
@@ -30,12 +30,10 @@ class SearchResults extends React.Component {
         let location = urlParams.get('location');
         this.state = {
             restaurants: this.searchYelp(term, location)
-
         };
         this.searchYelp = this.searchYelp.bind(this);
     }
     searchYelp(term, location) {
-        
         Yelp.search(term, location).then(restaurants => {
             this.setState({restaurants: restaurants});
         });
@@ -43,12 +41,12 @@ class SearchResults extends React.Component {
     render() {
         return (
             <div className = "Search-results">
+                <SmallSearchBar handleSearch = {this.searchYelp} />
                 <h1> search results page !</h1>
-                <SearchBar handleSearch = {this.searchYelp} />
+                
                 {this.state.restaurants ? 
-                <RestaurantList restaurants = {this.state.restaurants}/>
-                : <h1> loading </h1>
-            }
+                    <RestaurantList restaurants = {this.state.restaurants}/>
+                    : <h1> loading </h1>}
             </div>
         );
     }
