@@ -1,5 +1,10 @@
-.RestaurantList {
+.Restaurant-List {
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
     flex-wrap: wrap;
 }
+
+.Restaurant-List div {
+    flex: 50%;
+}
+

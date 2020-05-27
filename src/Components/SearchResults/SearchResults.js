@@ -17,23 +17,23 @@ const temporaryRestaurant =
     rating: 5.0,
     reviewCount: 100};
 
+    let queryString = window.location.search;
+        let urlParams = new URLSearchParams(queryString);
+        let term = urlParams.get('term');
+        let location = urlParams.get('location');
 
 
 class SearchResults extends React.Component {
 
     constructor(props) {
         super(props);
-        let queryString = window.location.search;
-        let urlParams = new URLSearchParams(queryString);
-        let term = urlParams.get('term');
-        let location = urlParams.get('location');
+        
 
         this.state = {
             restaurants: [],
             isLoading: false
         };
         this.searchYelp = this.searchYelp.bind(this);
-
     }
 
     searchYelp(term, location) {
@@ -45,10 +45,12 @@ class SearchResults extends React.Component {
         return (
             <div className = "Search-results">
                 <SmallSearchBar/>
-                <h1> search results page !</h1>
+                
                 
                 {!this.state.isLoading ? 
-                    <RestaurantList restaurants = {this.state.restaurants}/>
+                <div>
+                    <h1 id = "Header"> Top results in {location}:</h1>
+                    <RestaurantList restaurants = {this.state.restaurants}/></div>
                     : <h1> Loading... </h1>}
             </div>
         );
@@ -78,7 +80,7 @@ class SearchResults extends React.Component {
 }
 
 
-
+/*
 const makeCancelable = (promise) => {
     let hasCanceled_ = false;
 
@@ -103,5 +105,5 @@ let term = urlParams.get('term');
 let location = urlParams.get('location');
 
 const cancelablePromise = makeCancelable(Yelp.search(term, location));
-
+*/
 export default SearchResults;

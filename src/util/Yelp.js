@@ -37,6 +37,32 @@ const Yelp = {
             return [];
         });
 
+    },
+
+    searchById(id) {
+        return fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/${id}`
+        , {headers: {Authorization: `Bearer ${apiKey}`}})
+        .then(handleErrors)
+        .then(jsonResponse => {
+
+            return {id: jsonResponse.id,
+                    phone: jsonResponse.phone,
+                    name: jsonResponse.name,
+                    url: jsonResponse.url,
+                    imageUrl: jsonResponse.image_url,
+                    city: jsonResponse.location.city,
+                    state: jsonResponse.location.state,
+                    zipCode: jsonResponse.location.zip_code,
+                    country: jsonResponse.location.country,
+                    address: jsonResponse.location.address1,
+                    category: jsonResponse.categories[0].title,
+                    rating: jsonResponse.rating,
+                    reviewCount: jsonResponse.review_count};
+            } 
+        ).catch(error => {
+            console.log(error);
+            return [];
+        });
     }
 
 }

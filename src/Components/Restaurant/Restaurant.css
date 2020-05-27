@@ -1,24 +1,29 @@
 .Restaurant {
-    height: 20rem;
-    width: 70rem;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    border: solid;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 15rem;
+    width: 90%;
+    border-top: solid teal;
+    border-right: solid teal;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin: auto;
+    overflow: hidden;
 }
 
 .Restaurant .image-container {
-    width: 20rem;
-
+    width: 15rem;
+    height: 15rem;
 }
 
 .Restaurant img {
     border-radius: 10px;
-    height: 60%;
-    width: 60%;
+    height: 15rem;
+    width: 15rem;
     opacity: 70%;
-    float:left;
     margin-right: 50px;
-    margin-left: 50px;
+
 }
 
 .clickable-img:hover {
@@ -34,9 +39,9 @@
 }
 
 
-.Restaurant h1 {
-    font-size: 2rem;
-
+.Restaurant-name {
+    font-size: 0.8rem;
+    
 }
 
 .Review-info {
