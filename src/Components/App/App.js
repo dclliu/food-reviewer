@@ -25,12 +25,14 @@ class App extends React.Component {
                     <Route exact path = '/'> <Main/> </Route>
                     
                 </Switch>
-                <div className = "header">
+                <div className = "footer">
+                    <h4>2020 Daniel Liu</h4>
+                    <div className = "links">
                     <ul>
-                        <li><Link to = '/'>Home</Link></li>
                         <li><Link to = 'about'> About </Link></li>
                         <li><Link to = 'contact'>Contact</Link></li>
                     </ul>
+                    </div>
                 </div>
             </Router>
         );

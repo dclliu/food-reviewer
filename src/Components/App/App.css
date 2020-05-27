@@ -15,3 +15,35 @@ input:focus {
 .App {
   font-family: 'Work Sans', sans-serif;
 }
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: rgb(128, 199, 199);
+  height: 4.1rem;
+}
+
+ul > li {
+  display: inline-block;
+
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.footer h4 {
+  padding-left: 1rem;
+}
+
+.footer li {
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}

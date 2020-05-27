@@ -9,7 +9,6 @@ function handleErrors(response) {
 
 const Yelp = {
     search(term, location) {
-        console.log(`term is ${term}, location is ${location}`);
         return fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}`
         , {headers: {Authorization: `Bearer ${apiKey}`}})
         .then(handleErrors)

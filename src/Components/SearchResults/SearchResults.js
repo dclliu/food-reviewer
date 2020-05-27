@@ -1,6 +1,5 @@
 import React from 'react';
 import './SearchResults.css';
-import Main from '../Main/Main';
 import RestaurantList from '../RestaurantList/RestaurantList';
 import Yelp from '../../util/Yelp';
 import SmallSearchBar from '../SmallSearchBar/SmallSearchBar';
@@ -28,11 +27,15 @@ class SearchResults extends React.Component {
         let urlParams = new URLSearchParams(queryString);
         let term = urlParams.get('term');
         let location = urlParams.get('location');
+
         this.state = {
-            restaurants: this.searchYelp(term, location)
+            restaurants: [],
+            isLoading: false
         };
         this.searchYelp = this.searchYelp.bind(this);
+
     }
+
     searchYelp(term, location) {
         Yelp.search(term, location).then(restaurants => {
             this.setState({restaurants: restaurants});
@@ -41,17 +44,64 @@ class SearchResults extends React.Component {
     render() {
         return (
             <div className = "Search-results">
-                <SmallSearchBar handleSearch = {this.searchYelp} />
+                <SmallSearchBar/>
                 <h1> search results page !</h1>
                 
-                {this.state.restaurants ? 
+                {!this.state.isLoading ? 
                     <RestaurantList restaurants = {this.state.restaurants}/>
-                    : <h1> loading </h1>}
+                    : <h1> Loading... </h1>}
             </div>
         );
+    }
+
+    componentDidMount() {
+        this.setState({isLoading: true});
+
+        let queryString = window.location.search;
+        let urlParams = new URLSearchParams(queryString);
+        let term = urlParams.get('term');
+        let location = urlParams.get('location');
+        Yelp.search(term, location).then(restaurants => {
+            this.setState({restaurants: restaurants, isLoading: false});
+        });
+        /*
+        cancelablePromise.then(restaurants => {
+            this.setState({restaurants: restaurants, isLoading: false});
+        });
+        */
+    }
+    componentWillUnmount() {
+        /*
+        cancelablePromise.cancel();
+        */
     }
 }
 
 
+
+const makeCancelable = (promise) => {
+    let hasCanceled_ = false;
+
+    const wrappedPromise = new Promise((resolve, reject) => {
+        promise.then(
+            val => hasCanceled_ ? reject({isCanceled: true}) : resolve(val),
+            error => hasCanceled_ ? reject({isCanceled: true}) : reject(error)
+        );
+    });
+
+    return {
+        promise: wrappedPromise,
+        cancel() {
+            hasCanceled_ = true;
+        },
+    };
+};
+
+let queryString = window.location.search;
+let urlParams = new URLSearchParams(queryString);
+let term = urlParams.get('term');
+let location = urlParams.get('location');
+
+const cancelablePromise = makeCancelable(Yelp.search(term, location));
 
 export default SearchResults;

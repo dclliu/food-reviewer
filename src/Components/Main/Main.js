@@ -1,6 +1,7 @@
 import React from 'react';
 import './Main.css';
 import BigSearchBar from '../BigSearchBar/BigSearchBar';
+import {Link} from 'react-router-dom';
 
 class Main extends React.Component {
 
@@ -8,12 +9,12 @@ class Main extends React.Component {
         return (
             <div className="Main">
                 <div className = "text-container">
-                <div className = "text">
+                <Link className = "text" to = '/' style={{ textDecoration: 'none' }}>
                     <h1> food-reviewer </h1>
-                    <h1> main page </h1>
+                    
+                </Link>
                 </div>
-                </div>
-                <BigSearchBar handleSearch = {() => {}}/>
+                <BigSearchBar/>
             </div>
         );
     }
