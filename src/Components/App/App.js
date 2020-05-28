@@ -3,6 +3,9 @@ import './App.css';
 import Main from '../Main/Main';
 import SearchResults from '../SearchResults/SearchResults';
 import ReviewPage from '../ReviewPage/ReviewPage';
+import About from '../SidePages/About';
+import Contact from '../SidePages/Contact';
+
 import {
     BrowserRouter as Router,
     Switch,
@@ -41,14 +44,3 @@ class App extends React.Component {
 
 export default App;
 
-const About = () => {
-    return (
-        <h1> this is the about page </h1>
-    );
-}
-
-const Contact = () => {
-    return (
-        <h1> this is the contact page </h1>
-    );
-}

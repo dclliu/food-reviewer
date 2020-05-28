@@ -21,14 +21,14 @@
     border-radius: 10px;
     height: 15rem;
     width: 15rem;
-    opacity: 70%;
+    opacity: 90%;
     margin-right: 50px;
 
 }
 
 .clickable-img:hover {
     cursor: pointer;
-    opacity: 80%;
+    opacity: 100%;
 }
 
 

@@ -58,11 +58,6 @@ class SearchResults extends React.Component {
 
     componentDidMount() {
         this.setState({isLoading: true});
-
-        let queryString = window.location.search;
-        let urlParams = new URLSearchParams(queryString);
-        let term = urlParams.get('term');
-        let location = urlParams.get('location');
         Yelp.search(term, location).then(restaurants => {
             this.setState({restaurants: restaurants, isLoading: false});
         });
