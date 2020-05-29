@@ -15,7 +15,9 @@ date
 
 class Review extends React.Component {
     render() {
-        return;
+        return (
+            <h1>this is a review</h1>
+        );
     }
 }
 

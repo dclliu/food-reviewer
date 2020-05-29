@@ -31,7 +31,10 @@
     opacity: 100%;
 }
 
-
+.Info-text {
+    margin: auto;
+    color: white;
+}
 
 .clickable-h1:hover {
     cursor: pointer;

@@ -46,12 +46,13 @@ class SearchResults extends React.Component {
             <div className = "Search-results">
                 <SmallSearchBar/>
                 
-                
-                {!this.state.isLoading ? 
-                <div>
-                    <h1 id = "Header"> Top results in {location}:</h1>
-                    <RestaurantList restaurants = {this.state.restaurants}/></div>
-                    : <h1> Loading... </h1>}
+                <div className = "content">
+                    {!this.state.isLoading ? 
+                    <div>
+                        <h1 id = "Header"> Top results in {location}:</h1>
+                        <RestaurantList restaurants = {this.state.restaurants}/></div>
+                        : <h1> Loading... </h1>}
+                </div>
             </div>
         );
     }
