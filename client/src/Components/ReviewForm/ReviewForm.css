@@ -1,0 +1,20 @@
+.Review-Form {
+    width: 100%;
+    border: solid;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+textarea#description {
+    height: 7rem;
+}
+
+.Review-Form input, textarea {
+    width: 100%;
+    font-size: 1.3rem;
+    margin-bottom: 2%;
+}
+
+.Review-Form input {
+    height: 2rem;
+}

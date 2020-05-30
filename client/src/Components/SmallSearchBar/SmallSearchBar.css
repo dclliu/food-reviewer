@@ -1,0 +1,84 @@
+.SmallSearchBar {
+    display: flex;
+    flex-direction: wrap;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .SmallSearchBar-container {
+    height: 8rem;
+    background-image: url('./background-photo2.jpg');
+    background-color: grey;
+    background-repeat: no-repeat;
+    background-position: inherit;
+    background-size: cover;
+  }
+
+  .bar-container {
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+  }
+
+.logo-container {
+    display: flex;
+    float: left;
+    justify-content: center;
+    text-align: center;
+    margin-right: 1rem;
+    
+  }
+
+.logo-container:hover {
+    cursor:pointer
+  }
+
+  .logo-text {
+    text-align: center;
+    padding: 5px 40px;
+    background-color: teal;
+    border: 1px solid black;
+  }
+
+  .SmallSearchBar-container h3 {
+    text-align: center;
+    color: white;
+    margin-left: 1rem;
+  }
+
+  .SmallSearchBar-fields {
+
+    margin-top: 1rem;
+    width: 20rem;
+    height: 2rem;
+    margin-right: 0rem;
+    margin-left: 1rem;
+    border: 1px solid teal;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 230;
+    padding-left: 1rem;
+  }
+ 
+  
+
+  .SmallSearchBar-submit{
+
+
+    height: 2rem;
+    width: 6rem;
+    margin-left: 0.5rem;
+    border: 1px solid black;
+    border-radius: 4px;
+
+    background-color: teal;
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 1rem;
+    transition: background-color .5s;
+  }
+  
+  .SmallSearchBar-submit:hover {
+    cursor: pointer;
+    background-color: #a7874b;
+  }

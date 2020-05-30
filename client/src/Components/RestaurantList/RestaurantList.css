@@ -1,0 +1,10 @@
+.Restaurant-List {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.Restaurant-List div {
+    flex: 50%;
+}
+

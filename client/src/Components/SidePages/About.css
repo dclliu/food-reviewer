@@ -1,0 +1,26 @@
+.SidePage .container {
+    display: flex;
+    height: 29rem;
+    font-size: 1.5rem;
+    background-image: url('./sidephoto2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    align-items: center;
+    opacity: 80%;
+}
+
+.SidePage .box {
+    background-color: teal;
+    padding: 3rem;
+    width: 40%;
+    text-align: center;
+    margin: auto;
+}
+
+
+.SidePage ul>li {
+    display: block;
+    margin-top: 1rem;
+
+}

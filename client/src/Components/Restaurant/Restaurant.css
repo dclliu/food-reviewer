@@ -1,0 +1,53 @@
+.Restaurant {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 15rem;
+    width: 90%;
+    border-top: solid teal;
+    border-right: solid teal;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.Restaurant .image-container {
+    width: 15rem;
+    height: 15rem;
+}
+
+.Restaurant img {
+    border-radius: 10px;
+    height: 15rem;
+    width: 15rem;
+    opacity: 90%;
+    margin-right: 50px;
+
+}
+
+.clickable-img:hover {
+    cursor: pointer;
+    opacity: 100%;
+}
+
+.Info-text {
+    margin: auto;
+    color: white;
+}
+
+.clickable-h1:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+.Restaurant-name {
+    font-size: 0.8rem;
+    
+}
+
+.Review-info {
+      color: #CCA353;
+  font-weight: 600;
+}

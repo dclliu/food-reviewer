@@ -1,0 +1,16 @@
+.Review-page {
+    background-color: rgba(0, 19, 19, 0.9);
+}
+
+.Restaurant-display {
+    width: 50%;
+}
+
+.Form-display {
+    width: 45%;
+}
+
+.Review-page .row {
+    display: flex;
+    margin: 2% 2% 2% 0%;
+}
