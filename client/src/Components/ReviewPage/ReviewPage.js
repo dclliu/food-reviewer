@@ -49,14 +49,14 @@ class ReviewPage extends React.Component {
 
                 
                 
-                {this.state.reviews && this.state.reviews.map(rev => {
-                    return <Review review = {rev} key = {rev.id}/>
-                })}
-                
             </div>
         );
     }
-
+/*
+                {this.state.reviews && this.state.reviews.map(rev => {
+                    return <Review review = {rev} key = {rev.id}/>
+                })}
+                */
     componentDidMount() {
         if(this.state.restaurant === '') {
             this.setState({isLoading: true});
@@ -68,7 +68,7 @@ class ReviewPage extends React.Component {
             });
         }
 
-        fetch('/users')
+        fetch('/customers')
         .then(res => {
             console.log(res);
             return res.json()
@@ -78,7 +78,7 @@ class ReviewPage extends React.Component {
             this.setState({reviews: reviews});
         }).then(() => {
             console.log(this.state.reviews);
-        });
+        }).catch(error => console.log(error));
             
         
     }
