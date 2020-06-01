@@ -6,6 +6,10 @@ import Yelp from '../../util/Yelp';
 import ReviewForm from '../ReviewForm/ReviewForm';
 import Review from '../Review/Review';  
 
+let queryString = window.location.search;
+let urlParams = new URLSearchParams(queryString);
+let id = urlParams.get('id');
+
 class ReviewPage extends React.Component {
     constructor(props) {
         super(props);
@@ -29,6 +33,7 @@ class ReviewPage extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
     handleSubmit(e) {
+
         return;
     }
     render() {
@@ -44,10 +49,13 @@ class ReviewPage extends React.Component {
                         }
                         
                     </div>
-                    <div className = "Form-display"><ReviewForm /></div>
+                    <div className = "Form-display"><ReviewForm restaurantId = {id}/></div>
                 </div>
-
-                
+                <h1>List of reviews:</h1>
+                {this.state.reviews.length ? this.state.reviews.map(rev => {
+                    return <Review review = {rev} key = {rev.review_id}/>
+                }) : <h1>No reviews yet!</h1>
+                }
                 
             </div>
         );
@@ -60,25 +68,20 @@ class ReviewPage extends React.Component {
     componentDidMount() {
         if(this.state.restaurant === '') {
             this.setState({isLoading: true});
-            let queryString = window.location.search;
-            let urlParams = new URLSearchParams(queryString);
-            let id = urlParams.get('id');
             Yelp.searchById(id).then(restaurants => {
                 this.setState({restaurant: restaurants, isLoading: false});
             });
         }
 
-        fetch('/customers')
+        fetch(`/review/restaurantId/${id}`)
         .then(res => {
-            console.log(res);
             return res.json()
             })
         .then(reviews => { 
             console.log(reviews); 
             this.setState({reviews: reviews});
-        }).then(() => {
-            console.log(this.state.reviews);
-        }).catch(error => console.log(error));
+        })
+        .catch(error => console.log(error));
             
         
     }

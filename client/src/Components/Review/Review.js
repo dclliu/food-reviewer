@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './Review.css';
 /*
 NEEDS:
 
@@ -16,12 +16,11 @@ date
 class Review extends React.Component {
     render() {
         return (
-            <div>
-                <h1>id: {this.props.review.id}</h1>
-                <h1>name: {this.props.review.name}</h1>
-                <h1>dishname: {this.props.review.dishname}</h1>
-                <h1>dishrating: {this.props.review.dishrating}</h1>
-                <h1>dishbody: {this.props.review.dishbody}</h1>
+            <div className = "Review">
+                <h1>Dish name: {this.props.review.dish_name}</h1>
+                <h1>Rating: {this.props.review.dish_rating}</h1>
+                <h1>{this.props.review.dish_description}</h1>
+                <h3>Date: {this.props.review.review_date}</h3>
             </div>
         );
     }

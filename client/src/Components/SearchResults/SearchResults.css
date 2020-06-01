@@ -1,13 +1,12 @@
 #Header {
-    margin-left: 40px;
-    padding-top: 1.5rem;
+    margin-left: 5%;
+    padding-top: 2%;
+    padding-bottom: 1%;
 }
 
 .Search-results .content {
-    background-color: rgba(0, 19, 19, 0.9);
+    background-color: rgb(240, 240, 240,1);
     margin-top: -1.4rem;
     
-} h1 {
-    color: white;
-}
+} 
 

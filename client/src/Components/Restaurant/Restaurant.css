@@ -2,28 +2,30 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 15rem;
-    width: 90%;
-    border-top: solid teal;
-    border-right: solid teal;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    margin: auto;
+    height: 100%;
+    width: 95%;
+    border: solid 0px teal;
+
+    border-radius: 5px;
+
+    margin-left: 5%;
+
     overflow: hidden;
+    background-color: rgb(230, 230, 230,1);
 }
 
-.Restaurant .image-container {
-    width: 15rem;
-    height: 15rem;
+.Restaurant:hover {
+    background-color: rgb(222, 230, 230,1);
 }
+
 
 .Restaurant img {
-    border-radius: 10px;
-    height: 15rem;
-    width: 15rem;
-    opacity: 90%;
-    margin-right: 50px;
+    height: 20vw;
+    width: 20vw;
+    border-radius: 5px;
+    object-fit: cover;
 
+    opacity: 100%;
 }
 
 .clickable-img:hover {
@@ -33,7 +35,7 @@
 
 .Info-text {
     margin: auto;
-    color: white;
+    font-size: 1vw;
 }
 
 .clickable-h1:hover {
@@ -43,11 +45,25 @@
 
 
 .Restaurant-name {
-    font-size: 0.8rem;
+    font-weight: lighter;
     
 }
 
 .Review-info {
-      color: #CCA353;
   font-weight: 600;
+}
+
+@media only screen and (max-width: 800px) {
+    .Restaurant img {
+        height: 40vw;
+        width: 40vw;
+        border-radius: 5px;
+        object-fit: cover;
+        opacity: 90%;
+    }
+    .Info-text {
+    
+    
+        font-size: 2.1vw;
+    }
 }

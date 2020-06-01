@@ -3,10 +3,11 @@
     flex-direction: wrap;
     flex-wrap: wrap;
     align-items: center;
+    width: 100%;
   }
 
   .SmallSearchBar-container {
-    height: 8rem;
+    height: 100%;
     background-image: url('./background-photo2.jpg');
     background-color: grey;
     background-repeat: no-repeat;
@@ -80,5 +81,9 @@
   
   .SmallSearchBar-submit:hover {
     cursor: pointer;
-    background-color: #a7874b;
+    background-color: #4ba790;
+  }
+
+  @media only screen and (max-device-width:480px) {
+    display: inline-block;
   }

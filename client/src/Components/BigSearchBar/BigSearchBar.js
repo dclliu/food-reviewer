@@ -41,7 +41,7 @@ class BigSearchBar extends React.Component {
 			<form onSubmit = {this.handleSearch}>
 				<div className = "BigSearchBar-fields">
 					<input placeholder = "Search by business" onChange = {this.handleTermChange}/>
-					<input placeholder = "Enter location" value = {this.state.location} onChange = {this.handleLocationChange}/>
+					<input placeholder = "Enter location"  onChange = {this.handleLocationChange}/>
 				</div>
 				<div className = "BigSearchBar-submit">
 					<input type = 'submit' value = 'Search'/>

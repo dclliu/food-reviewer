@@ -1,5 +1,12 @@
 .Review-page {
-    background-color: rgba(0, 19, 19, 0.9);
+    background-color: rgb(240, 240, 240,1);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+
+    
 }
 
 .Restaurant-display {
@@ -11,6 +18,17 @@
 }
 
 .Review-page .row {
-    display: flex;
-    margin: 2% 2% 2% 0%;
+
+
+}
+
+@media only screen and (max-width: 800px) {
+    .Restaurant-display {
+        width: 100%;
+        
+    }
+    
+    .Form-display {
+        width: 100%;
+    }
 }
