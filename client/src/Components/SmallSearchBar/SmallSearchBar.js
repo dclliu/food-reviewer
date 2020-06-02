@@ -51,20 +51,18 @@ class SmallSearchBar extends React.Component {
     render() {
 		return (
 			<div className = "SmallSearchBar-container">
-				<div className = "bar-container">
 				<Link className = "logo-container" to = '/' style={{ textDecoration: 'none' }}>
 					<div className = "logo-text">
 						<h3> food-reviewer </h3>
 					</div>
 				</Link>
-				<form onSubmit = {this.handleSearch}>
+				<form className = "searchForm" onSubmit = {this.handleSearch}>
 					<div >
 						<input className = "SmallSearchBar-fields" placeholder = "Search by business" value = {this.state.term} onChange = {this.handleTermChange}/>
 						<input className = "SmallSearchBar-fields" placeholder = "Enter location" value = {this.state.location} onChange = {this.handleLocationChange} />
 						<input className = "SmallSearchBar-submit" type = 'submit' value = 'Search'/>
 					</div>
 				</form>
-				</div>
 			</div>
 		);
 	}
