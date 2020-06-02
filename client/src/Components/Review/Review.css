@@ -1,4 +1,12 @@
 .Review {
-    border: solid teal;
-    
+    border: solid 2px teal;
+    margin-left: 2.5%;
+    margin-right: 0.7%;
+    padding: 2%;
+    margin-bottom: 2%;
+}
+
+.Review h1 {
+    font-weight: 400;
+    font-size: 1rem;
 }

@@ -42,16 +42,16 @@ class ReviewPage extends React.Component {
                 
                 <SmallSearchBar/>
                 <div className = "row">
+                    <div className = "Form-display"><ReviewForm restaurantId = {id}/></div>
                     <div className = "Restaurant-display">
-                    
+                        
                         {this.state.isLoading ? <h1> Loading... </h1> : 
                             <Restaurant restaurant = {this.state.restaurant} hasClick = {false}/>
                         }
                         
                     </div>
-                    <div className = "Form-display"><ReviewForm restaurantId = {id}/></div>
+                    
                 </div>
-                <h1>List of reviews:</h1>
                 {this.state.reviews.length ? this.state.reviews.map(rev => {
                     return <Review review = {rev} key = {rev.review_id}/>
                 }) : <h1>No reviews yet!</h1>

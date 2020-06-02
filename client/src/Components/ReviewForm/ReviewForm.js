@@ -57,15 +57,15 @@ class ReviewForm extends React.Component {
     render() {
         return (    
             <div className = "Review-Form">
-                <h1>Write a review</h1>
+                <h1>Write a review!</h1>
                 <form onSubmit = {this.handleSubmit}>
                     <div>
-                        <input id = "name" placeholder = "dish name" onChange = {this.handleNameChange}/>
-                        <input id = "rating" placeholder = "dish rating" onChange = {this.handleRatingChange}/>
-                        <textarea id = "description" placeholder = "dish description" onChange = {this.handleDescriptionChange}/>
+                        <input id = "name" placeholder = "Name of dish:" onChange = {this.handleNameChange}/>
+                        <input id = "rating" placeholder = "Rating (out of 5!)" onChange = {this.handleRatingChange}/>
+                        <textarea id = "description" placeholder = "How was it?" onChange = {this.handleDescriptionChange}/>
                     </div>
                     <div>
-                        <input type = 'submit' value = 'submit review'/>
+                        <input id = "submit" type = 'submit' value = 'Post'/>
                     </div>
                 </form>
             </div>

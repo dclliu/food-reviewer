@@ -34,8 +34,18 @@
 }
 
 .Info-text {
-    margin: auto;
+    margin-left: 5%;
     font-size: 1vw;
+}
+
+.Restaurant h1 {
+
+    font-weight: 500;
+}
+
+.Restaurant h3 {
+    font-weight: 500;
+    font-size: 1.1rem;
 }
 
 .clickable-h1:hover {

@@ -2,6 +2,7 @@
     background-color: rgb(240, 240, 240,1);
 }
 
+
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -10,25 +11,26 @@
 }
 
 .Restaurant-display {
-    width: 50%;
+    width: 45%;
+    flex: 45%;
+    margin-left: 1%;
+    margin-right: 1%;
 }
 
 .Form-display {
-    width: 45%;
-}
-
-.Review-page .row {
-
+    width: 53%;
 
 }
 
-@media only screen and (max-width: 800px) {
+
+
+@media only screen and (max-width: 1200px) {
     .Restaurant-display {
         width: 100%;
-        
+        margin-left: 0%;
     }
     
     .Form-display {
-        width: 100%;
+        width: 90%;
     }
 }
