@@ -1,13 +1,14 @@
 .SidePage .container {
     display: flex;
-    height: 29rem;
-    font-size: 1.5rem;
+    height: 28rem;
+    font-size: 2vw;
     background-image: url('./sidephoto2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
     align-items: center;
     opacity: 80%;
+    margin-bottom: 0%;
 }
 
 .SidePage .box {
@@ -23,4 +24,11 @@
     display: block;
     margin-top: 1rem;
 
+}
+
+@media only screen and (max-width: 800px) {
+    .SidePage .container {
+        height: 100%;
+        font-size: 4vw;
+    }
 }

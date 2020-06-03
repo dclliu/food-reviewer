@@ -9,6 +9,7 @@ class About extends React.Component {
                 <SmallSearchBar />
                 <div className = "container">
                     <div className = "box">
+                    <p>A website to review dishes from restaurants. See what to order at your next outing!</p>
                     <p> Website made by Daniel Liu, undergraduate Yale 2023. 
                     App utilizes Yelp API and MapQuest API.</p>
                     <p> Please see the contact page for questions/suggestions. </p>

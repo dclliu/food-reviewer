@@ -30,12 +30,8 @@ class ReviewPage extends React.Component {
                 reviews: []
             }
         }
-        this.handleSubmit = this.handleSubmit.bind(this);
     }
-    handleSubmit(e) {
 
-        return;
-    }
     render() {
         return (
             <div className = "Review-page">
@@ -54,7 +50,7 @@ class ReviewPage extends React.Component {
                 </div>
                 {this.state.reviews.length ? this.state.reviews.map(rev => {
                     return <Review review = {rev} key = {rev.review_id}/>
-                }) : <h1>No reviews yet!</h1>
+                }) : <h1 id = "none">Be the first to review a dish!</h1>
                 }
                 
             </div>
@@ -78,14 +74,10 @@ class ReviewPage extends React.Component {
             return res.json()
             })
         .then(reviews => { 
-            console.log(reviews); 
-            this.setState({reviews: reviews});
+            this.setState({reviews: reviews.reverse()});
         })
         .catch(error => console.log(error));
-            
-        
     }
-    
 }
 
 

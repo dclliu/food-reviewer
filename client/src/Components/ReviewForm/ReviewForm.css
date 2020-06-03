@@ -12,22 +12,27 @@
 
 .Review-Form h1 {
     font-weight: 400;
-
+    font-size: 1.9rem;
 }
 
 
 textarea#description {
-    height: 7rem;
+    height: 4.5rem;
     
 }
 
 input#name {
-    width: 70%;
+    width: 35%;
+    margin-right: 0.3rem;
+}
+
+input#user {
+    width: 35%;
     margin-right: 0.3rem;
 }
 
 input#rating {
-    width: 23%;
+    width: 20%;
 }
 
 .Review-Form input {
@@ -43,6 +48,7 @@ input#rating {
 
 .Review-Form textarea {
     width: 96%;
+    margin-bottom: 0.5rem;
 }
 
 input#submit {
@@ -58,5 +64,5 @@ input#submit:hover {
 }
 
 .Review-Form input {
-    height: 1.5rem;
+    height: 1.2rem;
 }

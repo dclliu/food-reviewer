@@ -53,7 +53,7 @@ class SmallSearchBar extends React.Component {
 			<div className = "SmallSearchBar-container">
 				<Link className = "logo-container" to = '/' style={{ textDecoration: 'none' }}>
 					<div className = "logo-text">
-						<h3> food-reviewer </h3>
+						<h3 id="logo"> d i s h </h3>
 					</div>
 				</Link>
 				<form className = "searchForm" onSubmit = {this.handleSearch}>

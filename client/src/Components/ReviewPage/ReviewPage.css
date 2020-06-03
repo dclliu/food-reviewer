@@ -1,12 +1,15 @@
 .Review-page {
     background-color: rgb(240, 240, 240,1);
+    background-image: url('background2.jpg');
+    background-size: cover;
+    
 }
 
 
 .row {
     display: flex;
     flex-wrap: wrap;
-
+    
     
 }
 
@@ -22,6 +25,13 @@
 
 }
 
+h1#none {
+    margin-left: 2.5%;
+    font-weight: 400;
+    margin-bottom: 0%;
+    padding-top: 4.5%;
+    padding-bottom: 4.5%;
+}
 
 
 @media only screen and (max-width: 1200px) {

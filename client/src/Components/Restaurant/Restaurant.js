@@ -35,7 +35,7 @@ class Restaurant extends React.Component {
 							<h3> {this.props.restaurant.city}, {this.props.restaurant.state}, {this.props.restaurant.zipCode}</h3>
 						</div>
 						<div className="Review-info" >
-							<h3> Average Yelp rating: {this.props.restaurant.rating}/5 </h3>
+							<h3> Average Yelp rating: {this.props.restaurant.rating} </h3>
 							<h3> {this.props.restaurant.reviewCount}  reviews made</h3>
 						</div>
 					</div>
