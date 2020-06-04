@@ -1,0 +1,112 @@
+
+.SmallSearchBar-container {
+
+  height: 100%;
+  background-image: url('./background-photo2.jpg');
+  background-color: grey;
+  background-repeat: no-repeat;
+  background-position: inherit;
+  background-size: cover;
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 3.5rem;
+
+  text-align: center;
+  justify-content: flex-start;
+}
+
+.searchForm {
+  margin: auto;
+}
+
+
+.logo-container:hover {
+  cursor:pointer;
+}
+
+.logo-text {
+  text-align: center;
+  
+  background-color: teal;
+  border: 1px solid black;
+  width: 15.6rem;
+  height: 4.5rem;
+  float: left;
+  font-size: 1rem;
+  padding-top: 0.7rem;
+}
+
+h3#logo {
+  font-weight: bold;
+}
+
+.SmallSearchBar-container h3 {
+  text-align: center;
+  color: white;
+
+}
+
+
+.SmallSearchBar-fields {
+
+  margin-top: 1.5rem;
+  width: 25%;
+  height: 2rem;
+  margin-right: 0rem;
+  margin-left: 1rem;
+  border: 1px solid teal;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 230;
+  padding-left: 1rem;
+}
+
+
+
+.SmallSearchBar-submit{
+
+
+  height: 2rem;
+  width: 8%;
+  margin-left: 0.3rem;
+  border: 1px solid black;
+  border-radius: 4px;
+
+  background-color: teal;
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 1rem;
+  transition: background-color .5s;
+  margin-right: 1rem;
+}
+
+.SmallSearchBar-submit:hover {
+  cursor: pointer;
+  background-color: #4ba790;
+}
+
+@media only screen and (max-width:980px) {
+  .SmallSearchBar-container {
+    padding-bottom: 2rem;
+  }
+  .logo-text {
+    padding-top: 0.7rem;
+    text-align: center;
+    width: 90%;
+    height: 10%;
+    margin: auto;
+  }
+  .SmallSearchBar-fields {
+    width: 30%;
+    font-size: 0.9rem;
+    padding-left: 0.5rem;
+  }
+  .SmallSearchBar-submit {
+    width: 15%;
+  }
+  .searchForm {
+    padding-right: 2.5rem;
+    margin-left: 0px;
+    padding-left: 0px;
+  }
+}

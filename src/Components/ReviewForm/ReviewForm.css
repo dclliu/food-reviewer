@@ -1,0 +1,68 @@
+.Review-Form {
+
+    display: inline-block;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 5%;
+
+}
+
+.Review-Form h1 {
+    font-weight: 400;
+    font-size: 1.9rem;
+}
+
+
+textarea#description {
+    height: 4.5rem;
+    
+}
+
+input#name {
+    width: 35%;
+    margin-right: 0.3rem;
+}
+
+input#user {
+    width: 35%;
+    margin-right: 0.3rem;
+}
+
+input#rating {
+    width: 20%;
+}
+
+.Review-Form input {
+    margin-bottom: 0.5rem;
+}
+
+.Review-Form input, textarea {
+    font-size: 1rem;
+    border: 1px solid teal;
+    border-radius: 5px;
+    padding: 1%;
+}
+
+.Review-Form textarea {
+    width: 96%;
+    margin-bottom: 0.5rem;
+}
+
+input#submit {
+    width: 20%;
+    background-color: teal;
+    color: white;
+    border: 1px solid black;
+    height: 2rem;
+}
+
+input#submit:hover {
+    cursor: pointer;
+}
+
+.Review-Form input {
+    height: 1.2rem;
+}

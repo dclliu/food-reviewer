@@ -1,0 +1,16 @@
+.Restaurant-List {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.Restaurant-List div {
+    flex: 49%;
+}
+
+@media only screen and (max-width: 800px) {
+    .Restaurant-List div {
+        flex: 100%;
+    }
+}
+

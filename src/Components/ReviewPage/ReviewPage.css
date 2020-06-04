@@ -1,0 +1,46 @@
+.Review-page {
+    background-color: rgb(240, 240, 240,1);
+    background-image: url('background2.jpg');
+    background-size: cover;
+    
+}
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+}
+
+.Restaurant-display {
+    width: 45%;
+    flex: 45%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.Form-display {
+    width: 53%;
+
+}
+
+h1#none {
+    margin-left: 2.5%;
+    font-weight: 400;
+    margin-bottom: 0%;
+    padding-top: 4.5%;
+    padding-bottom: 4.5%;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .Restaurant-display {
+        width: 100%;
+        margin-left: 0%;
+    }
+    
+    .Form-display {
+        width: 90%;
+    }
+}

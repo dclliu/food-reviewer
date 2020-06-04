@@ -1,0 +1,69 @@
+.BigSearchBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 15rem;
+  }
+
+
+
+  .BigSearchBar-fields {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .BigSearchBar-fields input {
+    width: 28rem;
+    height: 7rem;
+    padding: .66rem 1rem;
+    margin-right: 1rem;
+    border: 2px solid teal;
+    border-radius: 4px;
+    font-size: 3rem;
+    font-weight: 230;
+  }
+  
+  .BigSearchBar-fields input:last-child {
+    margin-right: 0;
+  }
+
+
+  .BigSearchBar-submit {
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .BigSearchBar-submit input {
+    border-radius: 4px;
+    padding: .72rem 1.7rem;
+    background-color: teal;
+    color: #ffffff;
+    font-weight: 600;
+    height: 4rem;
+    width: 10rem;
+    font-size: 1.5rem;
+    transition: background-color .5s;
+    border: 1px solid black;
+  }
+  
+  .BigSearchBar-submit input:hover {
+    cursor: pointer;
+    background-color: #4ba790;
+  }
+
+  @media only screen and (max-width: 1100px) {
+    .BigSearchBar-fields input {
+      width: 40%;
+      margin: 0;
+    }
+  }
+
+
+  @media only screen and (max-width: 600px) {
+    .BigSearchBar-fields input {
+      width: 100%;
+      margin: 0;
+    }
+  }
