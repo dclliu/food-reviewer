@@ -11,8 +11,8 @@ var reviewRouter = require('./routes/review.routes');
 var app = express();
 
 const publicPath = path.join(__dirname,  'public');
-const host = process.env.host || '0.0.0.0';
-const port = process.env.port || 9000;
+const host = process.env.HOST || '0.0.0.0';
+const port = process.env.PORT || 9000;
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
