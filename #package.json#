@@ -6,10 +6,10 @@
   },
   "private": true,
   "scripts": {
-    "start": "node server/app.js",
-    "build": "cd client/ && npm install && npm run build"
+      "start": "node server/app.js",
+      "build": "cd client/ && npm install && npm run build"
   },
-  "cacheDirectories": [
+    "cacheDirectories": [
     "node_modules",
     "react-ui/node_modules"
   ],
