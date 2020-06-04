@@ -1,7 +1,6 @@
 module.exports = {
-    HOST: "127.0.0.1",
-    USER: "root",
-    PASSWORD: "daniel57",
-    DB: "food_reviewer",
-    port: 9000
+    HOST: "us-cdbr-east-05.cleardb.net",
+    USER: "b6f256556f4b16",
+    PASSWORD: "2142b0e7",
+    DB: "heroku_f0f9ff705f6ce53"
 };  
