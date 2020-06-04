@@ -11,7 +11,8 @@ var reviewRouter = require('./routes/review.routes');
 var app = express();
 
 const publicPath = path.join(__dirname,  'public');
-const port = process.env.port || '9000';
+const host = process.env.host || '0.0.0.0';
+const port = process.env.port || 9000;
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -51,7 +52,7 @@ app.use(function(err, req, res, next) {
 
 
 
-app.listen(port, () => {
+app.listen(port, host, () => {
   console.log(`Server is up on port ${port}!`);
 });
 
