@@ -12,7 +12,7 @@ class Restaurant extends React.Component {
 		window.open(`/restaurant?id=${this.props.restaurant.id}`,"_blank"); //open review page in new tab
 	}
 	render() {
-		
+		//console.log(this.props.restaurant.imageUrl);
 		return (
 			<div className="Restaurant" >
 				
