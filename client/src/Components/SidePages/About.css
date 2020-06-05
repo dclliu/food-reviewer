@@ -2,9 +2,10 @@
     display: flex;
     height: 28rem;
     font-size: 2vw;
-    background-image: url('./sidephoto2.jpg');
+    /*background-image: url('./sidephoto2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    */
     color: white;
     align-items: center;
     opacity: 80%;

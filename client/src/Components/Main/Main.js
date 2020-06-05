@@ -15,7 +15,7 @@ class Main extends React.Component {
             <div className="Main">
                 <div className = "text-container">
                 <Link className = "text" to = '/' style={{ textDecoration: 'none' }}>
-                    <h1> dishhhhh </h1>
+                    <h1> dish </h1>
                     
                 </Link>
                 </div>
