@@ -6,7 +6,7 @@
   },
   "private": true,
   "scripts": {
-    "start": "node server/app.js",
+    "start": "cd client/ && npm start",
     "build": "cd client/ && npm install && npm run build"
   },
   "cacheDirectories": [
