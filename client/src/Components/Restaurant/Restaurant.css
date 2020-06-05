@@ -24,13 +24,10 @@
     width: 20vw;
     border-radius: 5px;
     object-fit: cover;
-
-    opacity: 100%;
 }
 
 .clickable-img:hover {
     cursor: pointer;
-    opacity: 100%;
 }
 
 .Info-text {
